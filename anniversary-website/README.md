@@ -18,3 +18,10 @@ Steps for production preparation
 While changing paths from local ones to production ones take extra care to check
 are uploaded resource path correct - Drupal will add numeric prefixes if 
 resource file already exist with the same name.
+
+TODO
+=======================================
+
+- Instead of using font awesome and svg images for various icons we should 
+  create our own font icon resource. Use http://fontello.com/ service for this.
+- Try to convert all background images to sprites.
