@@ -1,15 +1,18 @@
-@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "bootstrap.less";
+@import "carousel.less";
+
 @import "variables.less";
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700);
 
 html {
-  background: url(../img/background-repeat.jpg) repeat-y center top;
+  background: url('@{image-path}/background-repeat.jpg') repeat-y center top;
   background-color: #090f29;
   background-size: 100% auto;
 }
 
 body {
-  background: url(../img/background-top.jpg) no-repeat center top;
+  background: url('@{image-path}/background-top.jpg') no-repeat center top;
   background-size: 100% auto;
   font-size: 100%;
   text-align: center;
@@ -149,7 +152,7 @@ h2 {
   }
   
   h3 {
-    background: url(../img/ic-calendar.png) no-repeat center top;
+    background: url('@{image-path}/ic-calendar.png') no-repeat center top;
     background-size: 150px;
     margin-bottom: @grid-gutter-width*1.5;
     padding-top: @grid-gutter-width*9;
@@ -162,7 +165,7 @@ h3 {
 }
 
 .note {
-  background: url(../img/bg-note.jpg) repeat left top;
+  background: url('@{image-path}/bg-note.jpg') repeat left top;
   margin: 5em auto 0 auto;
   max-width: 713px;
   padding: 4.5em;
@@ -212,7 +215,7 @@ h3 {
   }
   
   .time {
-    background: url(../img/line-separator.svg) no-repeat center bottom;
+    background: url('@{image-path}/line-separator.svg') no-repeat center bottom;
     background-size: 400px auto;
     display: block;
     line-height: 1.1;
@@ -324,7 +327,7 @@ img.spn {
 }
 
 .register {
-  background: url(../img/line-separator.svg) no-repeat center top;
+  background: url('@{image-path}/line-separator.svg') no-repeat center top;
   background-size: 713px auto;
   margin-top: 8em;
   padding-top: 7em;
@@ -359,7 +362,7 @@ img.spn {
   text-align: center;
   
   .logo {
-    background: url(../img/bm-logo.png) no-repeat center top;
+    background: url('@{image-path}/bm-logo.png') no-repeat center top;
     background-size: 189px 140px;
     height: 140px;
     left: 50%;
@@ -429,19 +432,19 @@ img.spn {
     }
     
     &.facebook a {
-      background-image: url(../img/social-facebook.svg);
+      background-image: url('@{image-path}/social-facebook.svg');
     }
 
     &.twitter a {
-      background-image: url(../img/social-twitter.svg);
+      background-image: url('@{image-path}/social-twitter.svg');
     }
 
     &.google-plus a {
-      background-image: url(../img/social-google-plus.svg);
+      background-image: url('@{image-path}/social-google-plus.svg');
     }
 
     &.youtube a {
-      background-image: url(../img/social-youtube.svg);
+      background-image: url('@{image-path}/social-youtube.svg');
     }
   }
 }
