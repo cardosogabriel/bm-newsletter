@@ -15,14 +15,13 @@
 
       /* Styles */
 
-      a img {
-        border-style:none;
-      }
+      a img { border-style:none; }
 
-      a.link:hover {
-        color: #095da0!important;
-        text-decoration: underline!important;
-      }
+      .link:hover { text-decoration: underline!important; }
+
+      .link-blue:hover { color:#0a6bb8!important; }
+
+      .shop-btn:hover { background-color:#0a6bb8!important; }
 
       /* Mobile sites */
 
@@ -33,17 +32,11 @@
 				table[id="table-body"],
         table[class="flexible-container"]{width:100% !important;}
 
-        .link {
-          word-break: break-all!important;
-        }
+        .link-break { word-break: break-all!important; }
 
-        .bg-container {
-          padding:10px 0 0 0!important;
-        }
+        .bg-container { padding:10px 0 0 0!important; }
 
-        .browser-link {
-          padding-right:15px;
-        }
+        .browser-link { padding-right:15px; }
 
         .img-header {
           padding-bottom:6px!important;
@@ -54,8 +47,15 @@
         }
 
         .edition-info {
-          font-size: 15px!important;
-          padding-left: 59px!important;
+          font-size: 20px!important;
+          padding-left: 86px!important;
+        }
+
+        .top-image {
+          height: auto!important;
+          padding-top: 20px!important;
+          padding-bottom: 0!important;
+          width: 100%!important;
         }
 
         .editor-note {
@@ -70,9 +70,13 @@
           padding-right: 15px!important;
         }
 
-        .around-item {
-          padding-left:15px!important;
-          padding-right:15px!important;
+        .around-item,
+        .announcement-heading,
+        .announcement-text,
+        .blog-item,
+        .footer {
+          padding-left: 15px!important;
+          padding-right: 15px!important;
         }
 
         .around-pics td img,
@@ -81,24 +85,9 @@
           width:100%!important;
         }
 
-        .announcement-heading,
-        .announcement-text {
-          padding-left:15px!important;
-          padding-right:15px!important;
-        }
+        .blog-item-date { font-size: 14px!important; }
 
-        .blog-item {
-          padding-left: 15px!important;
-          padding-right: 15px!important;
-        }
-
-        .blog-item-date {
-          font-size: 14px!important;
-        }
-
-        .blog-item-title {
-          font-size: 16px!important;
-        }
+        .blog-item-title { font-size: 16px!important; }
 
         .grid-image-container {
           margin: 0 0 10px 0!important;
@@ -118,31 +107,23 @@
           width: 100%!important;
         }
 
-        .grid-item.first {
-          margin-top:0!important;
-        }
+        .grid-item.first { margin-top:0!important; }
 
         .grid-item td {
           padding-left: 0!important;
           padding-right: 0!important;
         }
 
-        .shop-item-container {
-          background-size: auto 100%!important;
-        }
+        .shop-item-container { background-size: auto 100%!important; }
+
+        .shop-image { text-align: center!important; }
 
         .shop-image {
-          text-align: center!important;
-        }
-
-        .shop-image a {
-          display: inline-block!important;
-          padding-bottom: 10px!important;
-        }
-
-        .shop-image a img {
+          padding-left: 15px!important;
           padding-top: 0!important;
         }
+
+        .shop-image a img { padding-top: 0!important; }
 
         .shop-item-description {
           padding-left: 20px!important;
@@ -192,15 +173,29 @@
                           <tr>
                             <td>
                               <a href="http://www.bhaktimarga.org" target="_blank" style="display:block;">
-                                <img src="http://media.bhaktimarga.org/newsletter/img/headers/header-international-2016.png" alt="Bhakti Marga Logo" border="0" class="img-header" style="display:block; height:120px; margin:0; padding-bottom:8px; padding-left:40px; padding-top:40px; width:514px;" />
+                                <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/header-2016.png" alt="Bhakti Marga Newsletter" border="0" class="img-header" style="display:block; height:151px; margin:0; padding-bottom:8px; padding-left:40px; padding-top:40px; width:317px;" />
                               </a>
                             </td>
                           </tr>
                           <tr>
                             <td>
                               <div class="edition-info" style="color:#007aae; font-family:Avenir Next,Avenir,sans-serif; font-size:22px; line-height:1.5; text-align: left; padding-left: 121px;">
-                                AUGUST 2016, #16
+                                AUGUST 2016, #17
                               </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- Top Image -->
+
+                    <tr>
+                      <td>
+                        <table width="700" cellspacing="0" cellpadding="0" border="0" class="flexible-container" style="margin:0 auto;">
+                          <tr>
+                            <td>
+                              <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/top-image.jpg" alt="Newsletter Theme Image" border="0" class="top-image" style="display:block; height:auto; margin:0; padding-bottom:8px; padding-top:40px; width:700px;" />
                             </td>
                           </tr>
                         </table>
@@ -216,34 +211,40 @@
                             <td class="editor-note" style="padding:40px 40px 40px 40px;">
                               <table cellspacing="0" cellpadding="0" border="0" class="flexible-container">
                                 <tr>
-                                  <td style="color:#193662; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
-                                   The objective for all of us depending on what we want is very clear. 125,000 generations of people have come and gone on this planet and very few in this time have realized the nearness of the love that is God. We celebrate so many things that bring us only temporary happiness. We seldom have the chance to come together and celebrate Love.
+                                  <td style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px; font-weight: 500; text-transform: uppercase;">
+                                   'Teri Mahima Kahi na Jane<br/>
+                                   Teri Mahima Lekhi na Jaye'
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#193662; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
-                                    That is what the Just Love festival is about. It is about celebrating what is the nearest and dearest to us disguised as our true self. All of this in the presence of one who is the living embodiment of that Divine Love, Paramahamsa Sri Swami Vishwananda. What becomes very clear is that when we come together in the presence of Love, we grow in Love and it happens spontaneously because that is what He is and what He wants for us each.
+                                  <td style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
+                                    The Glory of the Satguru can never truly be written or spoken about, but experienced in the heart.  Such is its beauty. It is limitless and infinite. We all are truly blessed to be with Gurudev and to have experienced this beauty by His Grace.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#193662; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
-                                   That is why He works tirelessly for all of us, so by being here for whatever event, we join hands with Him and one another honoring the purpose that we came here, which is to Love and by doing so, many things fall into place. We become part of the solution simply by putting Love first.
+                                  <td style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
+                                   As it is the month where we celebrate the appearance of Sri Krishna, it reminds me of the beautiful story that Gurudev told of Saint Kabirji in the <i>Guru Gita</i>. Kabirji grew up as a muslim but he was also considered to be an incarnation of Sri Krishna. It’s a reminder to us all that religion does not define your relationship with God. The relation of the Atma with Paramatma is only one of love.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#193662; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
-                                   As Guruji says "Just Love, Just do it" and we each can.
+                                  <td style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
+                                   In his heart he knew that Saint Ramanda was his Guru and through His deep devotion and perseverance he was accepted by his Guru. Kabirji had said, if he had to choose between Guru and God who would he bow to first, it would always be the Guru as through the Grace of Guru do we find God.
                                   </td>
+                                </tr>
+                                <tr>
+                                  <td style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5; padding-bottom: 10px;">
+                                   Every time I read his story it reminds me that every moment i can pray to be more devoted, sincere and to persevere. And to be Grateful for the most amazing treasure in all the universes, the Satguru.
+                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
                                     <table cellspacing="0" cellpadding="0" border="0" class="flexible-container">
                                       <tr>
                                         <td width="30" valign="middle" style="padding-right:10px;">
-                                          <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/editor-Paranthapa.png" alt="Thumbnail" width="30" height="30" border="0" />
+                                          <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/editor-mohini.png" alt="Thumbnail" width="30" height="30" border="0" style="border-radius: 15px;" />
                                         </td>
-                                        <td valign="middle" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5;">
-                                          Swami Paranthapa, <span style="color:#888888;">South Africa</span>
+                                        <td valign="middle" style="color:#193662; font-family:Avenir Next,Avenir,sans-serif; font-size:15px; line-height:1.5;">
+                                          <span style="font-weight:bold;">Swamini VishwaMohini</span>, India
                                         </td>
                                       </tr>
                                     </table>
@@ -262,58 +263,59 @@
                       <td style="background-color:#193662;">
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
                           <tr>
-                            <td class="heading" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform:uppercase;">
-                              BM Around the World
+                            <td class="heading" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; font-weight:400; line-height:1; padding:40px 40px 20px 40px; text-transform:uppercase;">
+                              Bhakti Marga<br/>
+                              <span style="font-weight:bold;">Around the World</span>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.5; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-02-Czech.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Events with Swami Baladhara in Eastern Bohemia, Czech Republic</a>: Readings out of Just Love and Blossoming of the Heart, bhajans and abishekam to Maha Lakshmi and Narasimha, general sharing of experiences with Guruji and much more took place.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-02-Czech.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.5; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://bhaktimarga.sk/events/event/vikendovy-pobyt-so-svamim-vishwaanashuyanandom/" target="_blank" style="color:#ffffff; text-decoration: none;">Upcoming 05-08 Aug</a>: Weekend retreat with Swami VishwaAnashuyananda in Slovakia.<a href="http://bhaktimarga.sk/events/event/vikendovy-pobyt-so-svamim-vishwaanashuyanandom/" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-03-Graz.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Yagna in Graz Austria with Swami Kurunandha</a>:	More than 20 devotees participated in the yagna which was offered to Shri Lakshmi Narayana. <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-03-Graz.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.5; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://bhaktimarga.cz/registrace-setkani-jadzni-se-svamim-vishwaanashuyanandou/" target="_blank" style="color:#ffffff; text-decoration: none;">Upcoming 27/28 Aug</a>: Events with Swami VishwaAnashuyananda in Prague, Czech Republic.<a href="http://bhaktimarga.cz/registrace-setkani-jadzni-se-svamim-vishwaanashuyanandou/" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-04 Cooking-Latvia.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Cooking for Guruji course in Bhajan Cafe in Riga, Latvia</a>: Over 10 participants learned with Mataji Lakshmi how to prepare delicious prasad and dishes which Paramahamsa Sri Swami Vishwananda loves to eat. If you want to learn to cook Paramahamsa Sri Swami Vishwananda’s favourite meals, please contact your country coordinator. <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-04-Bhajan Cafe.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="https://www.facebook.com/BhaktiMargaSlovensko/photos/pcb.912580798864557/912580205531283/?type=3&theater" target="_blank" style="color:#ffffff; text-decoration: none;">Slovak gathering with Swami Baladhara in Biely Kostol, Slovakia</a>: Over 80 devotees from Czech and Slovakia gathered to meet with Swami Baladhara. The program of the day covered Guru Puja, blessings given by Swami Baladhara, singing of bhajans, Satsang and Maha OM Chanting. <a href="https://www.facebook.com/BhaktiMargaSlovensko/photos/pcb.912580798864557/912580205531283/?type=3&theater" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-05-Austria.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Devotees worldwide gathered in most of the BM groups and temples worldwide to celebrate the appearance day of Paramahamsa Sri Swami Vishwananda.</a><a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-05-Japan.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-france.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Events with Swami Vijaya in South France:</a> Many devotees were part of various events with Swami Vijaya, where puja, yagna, bhajan singing, Satsang and OM Chanting were organised. <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-france.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-07-Swami Paranthapa.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Atma Kriya Yoga course with Swami Paranthapa</a>: In South Africa, Swami Paranthapa gave an Atma Kriya Yoga course and initiated 15 new sadhaks.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-07-Swami Paranthapa.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="https://www.facebook.com/Bhakti-Marga-Schweiz-1487527378188781/photos/?tab=album&album_id=1726764620931721" target="_blank" style="color:#ffffff; text-decoration: none;">Satsang with Swamini VishwaKishori Ma in Zurich, Switzerland:</a> Swamini gave a Satsang about ‘Love as the key for good health and a joyful living’ where many new participants could join.<a href="https://www.facebook.com/Bhakti-Marga-Schweiz-1487527378188781/photos/?tab=album&album_id=1726764620931721 " target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-08-Spain.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Swamini Prabhaavati in Soria, Spain</a>: Swamini travels tirelessly to different cities of Spain, this time to Soria where she spreads the Love and knowledge of the Just Love & Sri Guru Gita books.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-08-Spain.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-hamm.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Swamis and residents of Shree Peetha Nilaya participated at the Devi Kanchi Kamakshi festival in Hamm, Germany</a>: More than 30.000 Hindus attended a large Kanchi Kamakshi Devi procession where Swamis and residents of Shree Peetha Nilaya participated by doing seva.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-hamm.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-09-Czech-05.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Swamini Lakshmi visits Czech Republic</a>: Swamini Lakshmi visited Swami Baladhara and the Czech devotees to celebrate Paramahamsa Sri Swami Vishwananda’s appearance day – more than 130 devotees attended a Guru puja, Satsang, OM Chanting, Sudarshana yagna, received Vishnu Padam blessings and offered as a birthday gift the national heart-shaped linden tree.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-09-Czech-04.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-latvia.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Bhajan Cafe is present at the Holi festival in Riga, Latvia</a>: Swami Sharada and devotees were happily selling sweets and cakes at the Holi festival and spread Paramahamsa Sri Swami Vishwananda's message of Just Love.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-latvia.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <span style="color:#ffffff; text-decoration: none;">Country Darshan of UK, Canada and USA at Shree Peetha Nilaya</span>: Over 95 devotees from UK and 9 devotees from Canada and USA were blessed with Darshan and Satsang with Paramahamsa Sri Swami Vishwananda.
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-china.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Atma Kriya Yoga keeps spreading in China</a>: 7 new devotees were blessed by receiving Atma Kriya Yoga initiations in Guangzhou.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-china.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-12 Helsinki.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">Music Workshop in Helsinki, Finland</a>: Aaradhakananda from Shree Peetha Nilaya travelled to Helsinki where he taught more than 20 devotees how to play harmonium, mridanga and to sing bhajans.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-12-Helsinki2.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-spain.jpg" target="_blank" style="color:#ffffff; text-decoration: none;">New Atma Kriya Yoga initiations in Spain</a>: Swamini Prabhaavati Mata initiated six new enthusiastic Atma Kriya Yoga students in Barcelona, Spain.<a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-spain.jpg" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="around-item" style="color:#cfd1dc; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
-                              <a class="link" href=" https://www.facebook.com/Bhakti-Marga-Schweiz-1487527378188781/photos/?tab=album&album_id=1716310338643816" target="_blank" style="color:#ffffff; text-decoration: none;">Pre-event in Ticino, South Switzerland, with Swamini VishwaKishori Ma</a>: Swamini made a presentation about “Love as the key for good health and a joyful living”, there was OM Chanting, a satsang, bhajans and a powerful Lakshmi Yagna.
+                            <td class="around-item" style="color:#aaaaaa; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.3; padding-bottom:9px; padding-left:40px; padding-right:40px;">
+                              <a class="link" href="http://www.bhaktimarga.my/post-2/" target="_blank" style="color:#ffffff; text-decoration: none;">Pre-event for Paramahamsa Sri Swami Vishwananda’s Darshan Tour in Malaysia</a>: BM Malaysia is preparing Paramahamsa Sri Swami Vishwananda’s Darshan tour in October by organising free yoga classes, Babaji's Surya Namaskar and OM Chanting.<a href="http://www.bhaktimarga.my/post-2/" target="_blank"><img src="http://media.bhaktimarga.org/newsletter/2015/international/img/ic-external-link.png" alt="Go to link" height="23" width="23" style="vertical-align:middle;" /></a>
                             </td>
                           </tr>
                           <tr>
@@ -321,32 +323,88 @@
                               <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="around-pics" style="margin:0 auto">
                                 <tr>
                                   <td width="20%">
-                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-02-Czech.jpg" target="_blank" style="display:block; margin:0;">
-                                        <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-02-Eastern-Bohemia-Czech-thumb.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
+                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-slovakia.jpg" target="_blank" style="display:block; margin:0;">
+                                        <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-slovakia-thumb.png" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                   <td width="20%">
-                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-03-Graz.jpg" target="_blank" style="display:block; margin:0;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-03-Graz-thumb.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
+                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-france.jpg" target="_blank" style="display:block; margin:0;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-france-thumb.png" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                   <td width="20%">
-                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-04 Cooking-Latvia.jpg" target="_blank" style="display:block; margin:0;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-04-Cooking-Latvia.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
+                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-hamm.jpg" target="_blank" style="display:block; margin:0;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-hamm-thumb.png" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                   <td width="20%">
-                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-05-Austria.jpg" target="_blank" style="display:block; margin:0;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-05-Austria-thumb.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
+                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-china.jpg" target="_blank" style="display:block; margin:0;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-china-thumb.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                   <td width="20%">
-                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-05-Brazil.jpg" target="_blank" style="display:block; margin:0;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/around-05-Brazil-2-thumb.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
+                                    <a href="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-malaysia.jpg" target="_blank" style="display:block; margin:0;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/around-malaysia-thumb.jpg" width="140" height="140" alt="Thumbnail" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                 </tr>
                               </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+            				<!-- Special Announcements -->
+
+                    <tr>
+                      <td>
+                        <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
+                          <tr>
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
+                                Special<br/>
+                                <span style="font-weight:bold;">Announcements</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:20px; font-weight:normal; line-height:1; text-align:left; padding:10px 40px 0 40px;">
+                              Atma Kriya Yoga Retreat In-Depth
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; padding:10px 40px 0 40px;">
+                              We are happy to announce a new Atma Kriya Yoga Retreat In-Depth, that will take place in September at Shree Peetha Nilaya – Bhakti Marga Centre and Ashram, in Germany. This 5-day retreat offers you the unique opportunity to immerse yourself totally in your sadhana, away from the distractions of the world and daily duties. Through the practice of Atma Kriya Yoga twice a day, days of silence and contemplation, japa walk in nature, chanting of the Divine Name, guided meditations, you will explore, experience and love the power of Atma Kriya Yoga. ONLY for Atma Kriya Yoga Sadhaks (initiates of Atma Kriya Yoga).
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; padding:10px 40px 0 40px;">
+                              For more information and registration, visit: <a class="link link-blue" href="https://www.bhaktimarga.org/atma-kriya-yoga-in-depth" target="_blank" style="color:#0d87e9; text-decoration:none;">bhaktimarga.org/atma-kriya-yoga-in-depth</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:20px; font-weight:normal; line-height:1; text-align:left; padding:30px 40px 0 40px;">
+                              “HOLI HAI!” Pilgrimage with Paramahamsa Vishwananda
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; padding:10px 40px 0 40px;">
+                              From 9th – 19th March 2017, in Vrindavan, India, join the most joyful HOLI festival in the company of Paramahamsa Vishwananda!
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; padding:10px 40px 0 40px;">
+                              HOLI: the festival of colours, is perhaps the most joyful time in India. People light up bonfires to symbolise the victory of good over evil, they forget all their concerns, and throw colours and water at each other, celebrating the coming of spring and new beginnings. Although Holi is traditionally celebrated for two days, in Vraj, the legendary land of Sri Sri Radha & Krishna where Vrindavan lies, it’s a vivid festival for 10 days! And it's slowly becoming a tradition that it is in Vrindavan where our beloved Guruji chooses to celebrate Holi.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; padding:10px 40px 0 40px;">
+                              This year for the first time, Guruji and the participants will be staying in the soon-to-be inaugurated Bhakti Marga Giridhar Dham Ashram. In the spirit of Holi, Guruji will also visit the holy spots of Vraj where the Leela of Lord Krishna continues. Do you want to be one of the lucky ones who will accompany him? Don’t miss this absolutely precious chance of spending these HOLI Days with Paramahamsa Vishwananda in Vrindavan!
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="announcement-text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; padding:10px 40px 0 40px;">
+                              For more information and registration, visit: <a class="link link-blue" href="https://www.bhaktimarga.org/holi-pilgrimage-2017" target="_blank" style="color:#0d87e9; text-decoration:none;">bhaktimarga.org/holi-pilgrimage-2017</a>
                             </td>
                           </tr>
                         </table>
@@ -359,9 +417,10 @@
                       <td style="padding-bottom: 40px;">
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
                           <tr>
-                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform: uppercase">
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
                               <a href="http://www.bhaktimarga.org/events" target="_blank" style="color:#172348; text-decoration:none;">
-                                Upcoming Events
+                                Upcoming<br/>
+                                <span style="font-weight:bold;">Events</span>
                               </a>
                             </td>
                           </tr>
@@ -370,81 +429,81 @@
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item first">
                                 <tr>
                                   <td style="padding-right: 20px;">
-                                    <a href="http://justlovefestival.org/" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/06-jun/event-jlf.jpg" alt="Thumbnail" width="220" height="137" border="0" />
+                                    <a href="https://www.bhaktimarga.org/events/bhagavad-gita-course" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/event-bg.jpg" alt="Thumbnail" width="220" height="147" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 35px 3px 15px;">
-                                    15 - 17 July
+                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 35px 3px 15px; text-transform: uppercase;">
+                                    16 - 23 August
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 35px 3px 15px;">
-                                    <a class="link" href="http://justlovefestival.org/" target="_blank" style="color:#0d87e9; text-decoration:none; padding-right: 20px;">
-                                      Just Love Festival
+                                    <a class="link link-blue" href="https://www.bhaktimarga.org/events/bhagavad-gita-course" target="_blank" style="color:#0d87e9; text-decoration:none;">
+                                      Bhagavad Gita Course
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px;">
                                     Shree Peetha Nilaya<br/>
-                                    Paramahamsa Sri Swami Vishwananda
+                                    Paramahamsa Vishwananda
                                   </td>
                                 </tr>
                               </table>
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item">
                                 <tr>
                                   <td>
-                                    <a href="https://www.bhaktimarga.org/events/event/bhakti-summer-sangha" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/06-jun/event-summer-sangha.jpg" alt="Thumbnail" width="220" height="137" border="0" />
+                                    <a href="https://www.bhaktimarga.org/events/krishnajanmashtami" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/event-janmashtami.jpg" alt="Thumbnail" width="220" height="147" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
-                                    25 - 31 July
+                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px; text-transform: uppercase;">
+                                    24 August
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 15px 3px 15px;">
-                                    <a class="link" href="https://www.bhaktimarga.org/events/event/bhakti-summer-sangha" target="_blank" style="color:#0d87e9; text-decoration:none;">
-                                     Bhakti Summer Sangha
+                                    <a class="link link-blue" href="https://www.bhaktimarga.org/events/krishnajanmashtami" target="_blank" style="color:#0d87e9; text-decoration:none;">
+                                     Krishna Janmashtami
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 15px 3px 15px;">
                                     Shree Peetha Nilaya<br/>
-                                    Paramahamsa Sri Swami Vishwananda
+                                    Paramahamsa Vishwananda
                                   </td>
                                 </tr>
                               </table>
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="right" class="flexible-container grid-item">
                                 <tr>
                                   <td>
-                                    <a href="https://www.bhaktimarga.org/events/bhagavad-gita-course" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/06-jun/event-BG.jpg" alt="Thumbnail" width="220" height="137" border="0" />
+                                    <a href="https://www.bhaktimarga.org/events/Gayatri" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/event-gayatri-yagna.jpg" alt="Thumbnail" width="220" height="147" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
-                                    16 - 23 August
+                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px; text-transform: uppercase;">
+                                    17 - 18 September
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 15px 3px 15px;">
-                                    <a class="link" href="https://www.bhaktimarga.org/events/bhagavad-gita-course" target="_blank" style="color:#0d87e9; text-decoration:none;">
-                                      Bhagavad Gita Course
+                                    <a class="link link-blue" href="https://www.bhaktimarga.org/events/Gayatri" target="_blank" style="color:#0d87e9; text-decoration:none;">
+                                      Gayatri Yagna
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 15px 3px 15px;">
                                     Shree Peetha Nilaya<br/>
-                                    Paramahamsa Sri Swami Vishwananda
+                                    Paramahamsa Vishwananda
                                   </td>
                                 </tr>
                               </table>
@@ -457,12 +516,19 @@
                     <!-- Bhakti Shop Area -->
 
                     <tr>
-                      <td style="background-color:#688d41;">
+                      <td background="http://media.bhaktimarga.org/newsletter/2016/international/img/shop-bg.jpg" style="background-color:#73984a;">
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
                           <tr>
-                            <td class="heading" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform: uppercase">
+                            <td class="heading" style="padding:40px 40px 0 40px;">
+                              <a href="http://www.bhaktievent.de/magento/index.php/" target="_blank" style="display:inline-block; height:37;">
+                                <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/logo-bhakti-shop-white.png" alt="Bhakti Shop Logo" width="180" height="37">
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="heading" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:5px 40px 20px 40px; text-transform: uppercase">
                               <a href="http://www.bhaktievent.de/magento/index.php/" target="_blank" style="color:#ffffff; text-decoration:none;">
-                                Products in the Bhakti Shop
+                                <span style="font-weight:bold;">Highlights</span>
                               </a>
                             </td>
                           </tr>
@@ -470,27 +536,27 @@
                             <td class="shop-item-container">
                               <table width="280" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container">
                                 <tr>
-                                  <td align="right" class="shop-image">
-                                    <a href="http://www.bhaktievent.de/magento/index.php/bhakti-marga-clothing/bhakti-marga-just-love-shawl.html" target="_blank" style="display:block; padding-bottom:20px; padding-top:35px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/11-nov/shop-bms.png" alt="Bhakti Marga Shawl" width="auto" height="324" border="0" style="display:block; margin:0;" />
+                                  <td align="right" class="shop-image" style="padding-bottom:20px; padding-top:20px;">
+                                    <a href="http://www.bhaktievent.de/magento/index.php/books/the-essence-of-shreemad-bhagavatam.html" target="_blank" style="display:block;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/shop-bhagavatam.jpg" alt="Thumbnail" width="220" height="auto" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                 </tr>
                               </table>
                               <table width="420" border="0" cellpadding="0" cellspacing="0" align="right" class="flexible-container">
                                 <tr>
-                                  <td align="center" class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding: 40px 80px 20px 40px; vertical-align:top;">
-                                    Bhakti Marga Just Love Shawl
+                                  <td class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding: 20px 80px 10px 40px; vertical-align:top;">
+                                    The Essence of Shreemad Bhagavatam
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td align="center" class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; line-height:1.5; padding: 0 80px 25px 40px; vertical-align:top;">
-                                    <span style="font-style:italic;">Made out of 100% cotton, the Bhakti Marga Shawl is a great way to keep you warm during the cold months. The great thing about the Shawl is that it carries the message “JUST LOVE’ which summarizes the essence of Paramahamsa Sri Swami Vishwananda’s teachings. Keep warm this winter and at the same time spread the message of Love to the world.</span>
+                                  <td class="shop-item-description" style="color:#dddddd; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; line-height:1.5; padding: 0 80px 20px 40px; vertical-align:top;">
+                                    The Shreemad Bhagavatam is a scripture unlike no other. It is the final and greatest work of the great sage, Sri Vedavyasa, and serves as the culmination of all the Vedas and Puranas.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td align="center" class="shop-item-description" style="padding:0 80px 40px 40px;">
-                                    <a class="receive-updates" href="http://www.bhaktievent.de/magento/index.php/bhakti-marga-clothing/bhakti-marga-just-love-shawl.html" target="_blank" style="background-color:#b72025;  border-radius:3px; color:#ffffff; display:block; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; padding: 5px 0; text-decoration:none; width:75%;">
+                                  <td class="shop-item-description" style="padding:0 80px 20px 40px;">
+                                    <a class="shop-btn" href="http://www.bhaktievent.de/magento/index.php/books/the-essence-of-shreemad-bhagavatam.html" target="_blank" style="background-color:#0d87e9; border-radius:3px; color:#ffffff; display:block; font-family:Avenir Next,Avenir,sans-serif; font-size:16px; padding: 8px 0; text-align: center; text-decoration:none; text-transform: uppercase; width:50%;">
                                       BUY NOW
                                     </a>
                                   </td>
@@ -503,36 +569,108 @@
                               <table width="280" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container">
                                 <tr>
                                   <td align="right" class="shop-image">
-                                    <a href="http://www.bhaktievent.de/magento/index.php/the-shreemad-bhagavad-gita.html" target="_blank" style="display:block; padding-bottom:20px; padding-top:30px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/08-aug/shop-sbg.png" alt="Shreemad Bhagavad Gita book" width="auto" height="324" border="0" style="display:block; margin:0;" />
+                                    <a href="http://www.bhaktievent.de/magento/index.php/cds/the-essence-of-shreemad-bhagavatam-audio-cd.html" target="_blank" style="display:block; padding-bottom:20px; padding-top:20px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/shop-bhagavatam-cd.jpg" alt="Thumbnail" width="220" height="auto" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                 </tr>
                               </table>
                               <table width="420" border="0" cellpadding="0" cellspacing="0" align="right" class="flexible-container">
                                 <tr>
-                                  <td align="center" class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding: 60px 80px 5px 40px; vertical-align:top;">
-                                    Shreemad<br/>
-                                    Bhagavad Gita
+                                  <td class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding: 20px 80px 10px 40px; vertical-align:top;">
+                                    The Essence of Shreemad Bhagavatam - Audio Book
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td align="center" class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; font-weight:normal; padding: 0 80px 20px 40px; vertical-align:top;">
-                                    THE SONG OF LIFE
+                                  <td class="shop-item-description" style="color:#dddddd; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; line-height:1.5; padding: 0 80px 20px 40px; vertical-align:top;">
+                                    This audio book contains the direct commentary from the spiritual master, Paramahamsa Sri Swami Vishwananda.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td align="center" class="shop-item-description" style="color:#ffffff; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; line-height:1.5; padding: 0 80px 25px 40px; vertical-align:top;">
-                                    <span style="font-style:italic;">“Have you paid attention to this, O Arjuna, with a concentrated mind? Has your delusion, caused by ignorance been dispelled?”</span> <br />
-                                    – Chapter 18, Verse 72
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td align="center" class="shop-item-description" style="padding:0 80px 40px 40px;">
-                                    <a class="receive-updates" href="http://www.bhaktievent.de/magento/index.php/the-shreemad-bhagavad-gita.html" target="_blank" style="background-color:#b72025;  border-radius:3px; color:#ffffff; display:block; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; padding: 5px 0; text-decoration:none; width:75%;">
+                                  <td class="shop-item-description" style="padding:0 80px 40px 40px;">
+                                    <a class="shop-btn" href="http://www.bhaktievent.de/magento/index.php/cds/the-essence-of-shreemad-bhagavatam-audio-cd.html" target="_blank" style="background-color:#0d87e9; border-radius:3px; color:#ffffff; display:block; font-family:Avenir Next,Avenir,sans-serif; font-size:16px; padding: 8px 0; text-align: center; text-decoration:none; text-transform: uppercase; width:50%;">
                                       BUY NOW
                                     </a>
                                   </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                		<!-- Instagram Area -->
+
+                    <tr>
+                      <td>
+                        <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
+                          <tr>
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
+                              Recent<br/>
+                              <span style="font-weight:bold;">Instagram Posts</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item first">
+                                <tr>
+                                  <td class="grid-item-padding" style="padding-right:20px;">
+                                    <a href="https://www.instagram.com/p/BIkDgzwAMnK/" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="https://instagram.ftxl1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/13767526_274471046263247_1353116195_n.jpg" alt="Thumbnail" width="220" height="220" border="0" />
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
+                                    "True #Love is #eternal. This Love that you have been carrying for many #lifetimes ...
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:21px; padding: 0 35px 3px 15px;">
+                                    <a class="link" href="https://www.instagram.com/paramahamsa_vishwananda/" target="_blank" style="color:#888888; text-decoration:none;">paramahamsa_vishwananda</a><br/>
+                                    <span style="text-transform: uppercase;">1 Aug</span>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item">
+                                <tr>
+                                  <td>
+                                    <a href="https://www.instagram.com/p/BIhR_xTAm8V/" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="https://instagram.ftxl1-1.fna.fbcdn.net/t51.2885-15/e35/c133.0.534.534/13712829_1059500810786481_892222120_n.jpg" alt="Thumbnail" width="220" height="220" border="0" />
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
+                                    Rishi Tulsidas and Shridar das spending some time with one of the #Vrindavan locals ...
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:21px; padding: 0 35px 3px 15px;">
+                                    <a class="link" href="https://www.instagram.com/bhaktimarga/" target="_blank" style="color:#888888; text-decoration:none;">bhaktimarga</a><br/>
+                                    <span style="text-transform: uppercase;">31 Jul</span>
+                                    </td>
+                                </tr>
+                              </table>
+                              <table width="220" border="0" cellpadding="0" cellspacing="0" align="right" class="flexible-container grid-item">
+                                <tr>
+                                  <td>
+                                    <a href="https://www.instagram.com/p/BIpM6Q1APwR/" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="https://instagram.ftxl1-1.fna.fbcdn.net/t51.2885-15/e35/c133.0.534.534/13743276_287952511560032_432778050_n.jpg" alt="Thumbnail" width="220" height="220" border="0" />
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text" style="color:#333333; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
+                                    Maha #Vishnu incarnated as Lord #Rama and Lord #Krishna. (The murti here ...
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:21px; padding: 0 35px 3px 15px;">
+                                    <a class="link" href="https://www.instagram.com/bhaktimarga/" target="_blank" style="color:#888888; text-decoration:none;">bhaktimarga</a><br/>
+                                    <span style="text-transform: uppercase;">3 Aug</span>
+                                    </td>
                                 </tr>
                               </table>
                             </td>
@@ -547,9 +685,10 @@
                       <td>
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
                           <tr>
-                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform: uppercase">
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
                               <a href="https://www.youtube.com/user/bhaktimarga108" target="_blank" style="color:#172348; text-decoration:none;">
-                                Recent YouTube Videos
+                                Recent<br/>
+                                <span style="font-weight:bold;">YouTube Videos</span>
                               </a>
                             </td>
                           </tr>
@@ -558,58 +697,58 @@
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item first">
                                 <tr>
                                   <td class="grid-item-padding" style="padding-right:20px;">
-                                    <a href="https://www.youtube.com/watch?v=z45BZOywqYE" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/youtube-devotion.png" alt="Thumbnail" width="220" height="124" border="0" />
+                                    <a href="https://www.youtube.com/watch?v=UWJOytod2mg" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/youtube-rituals.jpg" alt="Thumbnail" width="220" height="147" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="text grid-heading" style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 35px 3px 15px;">
-                  									 <a class="link" href="https://www.youtube.com/watch?v=z45BZOywqYE" target="_blank" style="color:#0d87e9; text-decoration:none;">
-          												    How to Awaken Devotion - Insights from the Master
+                  									 <a class="link link-blue" href="https://www.youtube.com/watch?v=UWJOytod2mg" target="_blank" style="color:#0d87e9; text-decoration:none;">
+          												    Why do we perform Ceremonies and Rituals? - Insights from the Master
                   									 </a>
           												</td>
                                 </tr>
                                 <tr>
-                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px;">Published on 30 Jun</td>
+                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px; text-transform: uppercase;">14 Jul</td>
                                 </tr>
                               </table>
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item">
                                 <tr>
                                   <td>
-                                    <a href="https://www.youtube.com/watch?v=HNl8yWwWubg" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/youtube-sleep-less.png" alt="Thumbnail" width="220" height="124" border="0" />
+                                    <a href="https://www.youtube.com/watch?v=os1DSvUd2d8" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/youtube-maya.jpg" alt="Thumbnail" width="220" height="147" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="text grid-heading" style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 15px 3px 15px;">
-                  									 <a class="link" href="https://www.youtube.com/watch?v=HNl8yWwWubg" target="_blank" style="color:#0d87e9; text-decoration:none;">
-          												     How to Sleep Less and Maintain Productivity - Insights from the Master
+                  									 <a class="link link-blue" href="https://www.youtube.com/watch?v=os1DSvUd2d8" target="_blank" style="color:#0d87e9; text-decoration:none;">
+          												      The Removal of Maya (Illusion) - Insights from the Master
                   									 </a>
           												</td>
                                 </tr>
                                 <tr>
-                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px;">Published on 23 Jun</td>
+                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px; text-transform: uppercase;">23 Jul</td>
                                 </tr>
                               </table>
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="right" class="flexible-container grid-item">
                                 <tr>
                                   <td>
-                                    <a href="https://www.youtube.com/watch?v=QOBZjH_0Pto" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/youtube-nature-I.png" alt="Thumbnail" width="220" height="124" border="0" />
+                                    <a href="https://www.youtube.com/watch?v=sa5rxLJVHuE" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/youtube-desires.jpg" alt="Thumbnail" width="220" height="147" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="text grid-heading" style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 15px 3px 15px;">
-                  									 <a class="link" href="https://www.youtube.com/watch?v=QOBZjH_0Pto" target="_blank" style="color:#0d87e9; text-decoration:none;">
-          												      The Nature of the "I" - Insights from the Master
+                  									 <a class="link link-blue" href="https://www.youtube.com/watch?v=sa5rxLJVHuE" target="_blank" style="color:#0d87e9; text-decoration:none;">
+          												      Do all Desires have a Negative Outcome? - Insights from the Master
                   									 </a>
           												</td>
                                 </tr>
                                 <tr>
-                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px;">Published on 16 Jun</td>
+                                  <td class="text grid-details" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:13px; line-height:18px; padding: 0 35px 3px 15px; text-transform: uppercase;">28 Jul</td>
                                 </tr>
                               </table>
                             </td>
@@ -624,9 +763,10 @@
                       <td>
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
                           <tr>
-                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform: uppercase">
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
                               <a href="https://www.flickr.com/photos/bhaktimarga/sets/" target="_blank" style="color:#172348; text-decoration:none;">
-                                Recent Flickr Albums
+                                Recent<br/>
+                                <span style="font-weight:bold;">Flickr Albums</span>
                               </a>
                             </td>
                           </tr>
@@ -635,62 +775,63 @@
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item first">
                                 <tr>
                                   <td style="padding-right:20px;">
-                                    <a href="https://www.flickr.com/photos/bhaktimarga/sets/72157670487829506" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                    									<img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/flickr-Bharat-Gaurav.png" alt="Thumbnail" width="220" height="220" border="0" />
+                                    <a href="https://www.flickr.com/photos/bhaktimarga/sets/72157670598383131" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                    									<img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/flickr-guru-purnima.jpg" alt="Thumbnail" width="220" height="220" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 35px 3px 15px;">
-                  									<a class="link" href="https://www.flickr.com/photos/bhaktimarga/sets/72157670487829506" target="_blank" style="color:#0d87e9; text-decoration:none;">
-                                    Bharat Gaurav Award 2016 - Paramahamsa Vishwananda
+                  									<a class="link link-blue" href="https://www.flickr.com/photos/bhaktimarga/sets/72157670598383131" target="_blank" style="color:#0d87e9; text-decoration:none;">
+                                    Gurupurnima 2016 with Paramahamsa Vishwananda
                   									</a>
           												</td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 35px 3px 15px;">
-                                  02 July
+                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 35px 3px 15px; text-transform: uppercase;">
+                                  19 July
                                   </td>
                                 </tr>
-                              </table> <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item">
+                              </table>
+                              <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item">
                                 <tr>
                                   <td style="padding-right:20px;">
-                                    <a href="https://www.flickr.com/photos/bhaktimarga/sets/72157670465881376" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                    									<img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/flickr-aky.png" alt="Thumbnail" width="220" height="220" border="0" />
+                                    <a href="https://www.flickr.com/photos/bhaktimarga/sets/72157668330574513" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                    									<img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/flickr-jlf.jpg" alt="Thumbnail" width="220" height="220" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 15px 3px 15px;">
-                  									<a class="link" href="https://www.flickr.com/photos/bhaktimarga/sets/72157670465881376" target="_blank" style="color:#0d87e9; text-decoration:none;">
-          												    Atma Kriya Yoga Retreat 2016
+                  									<a class="link link-blue" href="https://www.flickr.com/photos/bhaktimarga/sets/72157668330574513" target="_blank" style="color:#0d87e9; text-decoration:none;">
+          												    Just Love Festival 2016 by Bhakti Marga
                   									</a>
           												</td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
-                                    26 June - 02 July
+                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px; text-transform: uppercase;">
+                                    15 - 17 July
                                   </td>
                                 </tr>
                               </table>
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container grid-item">
                                 <tr>
                                   <td>
-                                    <a href="https://www.flickr.com/photos/bhaktimarga/sets/72157667120761893" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
-                    									<img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/flickr-life-of-Love.png" alt="Thumbnail" width="220" height="220" border="0" />
+                                    <a href="https://www.flickr.com/photos/bhaktimarga/sets/72157670867155170" target="_blank" class="grid-image-container" style="display: block; padding-bottom:8px;">
+                    									<img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/flickr-bss.jpg" alt="Thumbnail" width="220" height="220" border="0" />
                                     </a>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:16px; line-height:21px; padding: 0 15px 3px 15px;">
-                  									<a class="link" href="https://www.flickr.com/photos/bhaktimarga/sets/72157667120761893" target="_blank" style="color:#0d87e9; text-decoration:none;">
-          												    The Life of Love (2016) – Paramahamsa Vishwananda
+                  									<a class="link link-blue" href="https://www.flickr.com/photos/bhaktimarga/sets/72157670867155170" target="_blank" style="color:#0d87e9; text-decoration:none;">
+          												    Bhakti Summer Sangha 2016
                   									</a>
           												</td>
                                 </tr>
                                 <tr>
-                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px;">
-                                    13 - 14 June
+                                  <td style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:21px; padding: 0 15px 3px 15px; text-transform: uppercase;">
+                                    24 - 31 July
                                   </td>
                                 </tr>
                               </table>
@@ -706,9 +847,10 @@
                       <td>
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto;">
                           <tr>
-                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform: uppercase">
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
                               <a href="http://paramahamsavishwananda-info.blogspot.de/" target="_blank" style="color:#172348; text-decoration:none;">
-                                Latest Blog Highlight
+                                Latest<br/>
+                                <span style="font-weight:bold;">Blog Highlight</span>
                               </a>
                             </td>
                           </tr>
@@ -717,25 +859,25 @@
                               <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="flexible-container">
                                 <tr>
                                   <td>
-                                    <a href="http://paramahamsavishwananda-info.blogspot.de/2016/07/paramahamsa-vishwananda-blesses-bhakti.html" target="_blank" class="grid-image-container" style="display:block;">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/07-jul/blog-Paramahamsa-bless-ashram.jpg" alt="Thumbnail" width="220" height="146" border="0" style="display:block; margin:0;" />
+                                    <a href="http://paramahamsavishwananda-info.blogspot.de/2016/07/new-sri-kripeshwarnath-temple-heart-of.html" target="_blank" class="grid-image-container" style="display:block;">
+                                      <img src="http://media.bhaktimarga.org/newsletter/2016/international/img/08-aug/blog-temple.jpg" alt="Thumbnail" width="220" height="146" border="0" style="display:block; margin:0;" />
                                     </a>
                                   </td>
                                 </tr>
                               </table>
                               <table width="405" border="0" cellpadding="0" cellspacing="0" align="right" class="flexible-container">
                                 <tr>
-                                  <td class="blog-item-date" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:16px; font-weight:normal; line-height:24px; padding-bottom: 8px; vertical-align:top;">
-                                    4 Jul 2016
+                                  <td class="blog-item-date" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:16px; font-weight:normal; line-height:24px; padding-bottom: 8px; text-transform: uppercase; vertical-align:top;">
+                                    28 Jul
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="blog-item-title" style="font-family:Avenir Next,Avenir,sans-serif; font-size:20px; font-weight:normal; line-height:24px; padding-bottom:10px; vertical-align:top;">
-                                    <a class="link" href="http://paramahamsavishwananda-info.blogspot.de/2016/07/paramahamsa-vishwananda-blesses-bhakti.html" target="_blank" style="color:#0d87e9; display:block; text-decoration:none;">Paramahamsa Vishwananda blesses Bhakti Marga UK Ashram</a>
+                                    <a class="link link-blue" href="http://paramahamsavishwananda-info.blogspot.de/2016/07/new-sri-kripeshwarnath-temple-heart-of.html" target="_blank" style="color:#0d87e9; display:block; text-decoration:none;">New Sri Kripeshwarnath temple - the heart of hearts</a>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="blog-post" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; text-align:left;">Directly a day after receiving the Bharat Gaurava Award, Paramahamsa Sri Swami Vishwananda blessed the site...
+                                  <td class="blog-post" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:14px; font-weight:normal; letter-spacing:0; line-height:1.5; text-align:left;">Be one of the 312 angels who make it happen. Dear friends and family of Guruji. As you may be aware of, one of the main priorities for Guruji (Paramahamsa Sri Swami Vishwananda) is ...
                                   </td>
                                 </tr>
                               </table>
@@ -745,26 +887,27 @@
                       </td>
                     </tr>
 
-
                     <!-- Twitter Area -->
+
 
                     <tr>
                       <td style="padding-bottom:25px;">
                         <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container" style="margin:0 auto; ">
                           <tr>
-                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:30px; font-weight:100; line-height:1.3; padding:40px 40px 20px 40px; text-transform: uppercase">
+                            <td class="heading" style="color:#172348; font-family:Avenir Next,Avenir,sans-serif; font-size:28px; line-height:1; padding:40px 40px 20px 40px; text-transform: uppercase">
                               <a href="https://twitter.com/vishwananda" target="_blank" style="color:#172348; text-decoration:none;">
-                                Twitter Highlights
+                                Highlights from<br/>
+                                <span style="font-weight:bold;">Twitter</span>
                               </a>
                             </td>
                           </tr>
                           <tr>
-                            <td style="border-top:1px solid #e8e8e8; padding:15px 15px 5px 15px;">
+                            <td style="padding:15px 15px 5px 15px;">
                               <table width="670" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container">
                                 <tr>
                                   <td width="40" valign="top" class="tweet-avatar" style="padding-right:15px;">
                                     <a href="https://twitter.com/vishwananda" target="_blank">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/twitter-swami.jpg" alt="Paramahamsa Sri Swami Vishwananda" width="40" height="40" border="0" />
+                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/twitter-swami.jpg" alt="Paramahamsa Sri Swami Vishwananda" width="40" height="40" border="0" style="border-radius: 20px;" />
                                     </a>
                                   </td>
                                   <td style="color:#333333;">
@@ -776,16 +919,21 @@
                                             <span style="color:#999999;">@vishwananda</span>
                                           </a>
                                           &nbsp;<span style="color:#999999;">·</span>
-                                          <a class="link" href="https://twitpl.us/fHVc" target="_blank" class="text" style="font-size:12px;text-decoration:none;">
-                                            <span style="color:#999999;">24 Jun</span>
+                                          <a class="link" href="https://twitter.com/vishwananda/status/752903071051739136" target="_blank" class="text" style="font-size:12px;text-decoration:none;">
+                                            <span style="color:#999999; text-transform: uppercase;">12 Jul</span>
                                           </a>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.5; padding-bottom:10px; padding-top:10px;">
-                                        There was a great #saint of Bengal, #Yukteshwar Giri. He was known as a great renunciate. A #wealthy person once came to him and said, ”You are a great renunciate.”
-                                        Giri laughed out loud. ”Look at him!” he said, pointing to the man. ”Look at him! He is a great renunciate himself, and he is calling me one. Don’t try to trap me with your words, my good man!”
-                                        Everyone was shocked, even his #disciples.
+                                        Just finish the inauguration of our new #temple of #Sri Sri Radha Akhilashvar in Hall in #Tirol #Austria jai Gurudev
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-bottom: 10px;">
+                                          <a href="https://twitter.com/vishwananda/status/752903071051739136" target="_blank">
+                                            <img class="twitter-img" src="https://pbs.twimg.com/media/CnLZR0LWAAA83rl.jpg" alt="Embedded image permalink" height="480">
+                                          </a>
                                         </td>
                                       </tr>
                                     </table>
@@ -795,12 +943,12 @@
                             </td>
                           </tr>
                           <tr>
-                            <td style="border-top:1px solid #e8e8e8; padding:15px 15px 5px 15px;">
+                            <td style="padding:15px 15px 5px 15px;">
                               <table width="670" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container">
                                 <tr>
                                   <td width="40" valign="top" class="tweet-avatar" style="padding-right:15px;">
                                     <a href="https://twitter.com/vishwananda" target="_blank">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/twitter-swami.jpg" alt="Paramahamsa Sri Swami Vishwananda" width="40" height="40" border="0" />
+                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/twitter-swami.jpg" alt="Paramahamsa Sri Swami Vishwananda" width="40" height="40" border="0" style="border-radius: 20px;" />
                                     </a>
                                   </td>
                                   <td style="color:#333333;">
@@ -812,14 +960,21 @@
                                             <span style="color:#999999;">@vishwananda</span>
                                           </a>
                                           &nbsp;<span style="color:#999999;">·</span>
-                                          <a class="link" href="https://twitter.com/vishwananda/status/745166914389835781" target="_blank" class="text" style="font-size:12px;text-decoration:none;">
-                                            <span style="color:#999999;">21 Jun</span>
+                                          <a class="link" href="https://twitter.com/vishwananda/status/752318738653937664" target="_blank" class="text" style="font-size:12px;text-decoration:none;">
+                                            <span style="color:#999999; text-transform: uppercase;">10 Jul</span>
                                           </a>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.5; padding-bottom:10px; padding-top:10px;">
-                                         #Yoga is not #physical #exercises like #Gymnastics but is the #love #union n true #longing of the #soul to 1 #beloved #Supreme #Lord
+                                         At pm 6.41 the cloud took the shape of Garuda over #ShreePeethaNilaya, #Giridhariji #blessing to all
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-bottom: 10px;">
+                                          <a href="https://twitter.com/vishwananda/status/752318738653937664" target="_blank">
+                                            <img class="twitter-img" src="https://pbs.twimg.com/media/CnDF5o6WcAAJ2GR.jpg" alt="Embedded image permalink" width="480">
+                                          </a>
                                         </td>
                                       </tr>
                                     </table>
@@ -829,12 +984,12 @@
                             </td>
                           </tr>
                           <tr>
-                            <td style="border-top:1px solid #e8e8e8; color:#333333; padding:15px 15px 5px 15px;">
+                            <td style="padding:15px 15px 5px 15px;">
                               <table width="670" border="0" cellpadding="0" cellspacing="0" align="center" class="flexible-container">
                                 <tr>
                                   <td width="40" valign="top" class="tweet-avatar" style="padding-right:15px;">
                                     <a href="https://twitter.com/vishwananda" target="_blank">
-                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/twitter-swami.jpg" alt="Paramahamsa Sri Swami Vishwananda" width="40" height="40" border="0" />
+                                      <img src="http://media.bhaktimarga.org/newsletter/2015/international/img/twitter-swami.jpg" alt="Paramahamsa Sri Swami Vishwananda" width="40" height="40" border="0" style="border-radius: 20px;" />
                                     </a>
                                   </td>
                                   <td>
@@ -846,14 +1001,21 @@
                                             <span style="color:#999999;">@vishwananda</span>
                                           </a>
                                           &nbsp;<span style="color:#999999;">·</span>
-                                          <a class="link" href="https://twitpl.us/fHhZ" target="_blank" class="text" style="font-size:12px;text-decoration:none;">
-                                            <span style="color:#999999;">10 Jun</span>
+                                          <a class="link" href="https://twitter.com/vishwananda/status/751112378146820096" target="_blank" class="text" style="font-size:12px;text-decoration:none;">
+                                            <span style="color:#999999; text-transform: uppercase;">7 Jul</span>
                                           </a>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td style="font-family:Avenir Next,Avenir,sans-serif; font-size:14px; line-height:1.5; padding-bottom:10px; padding-top:10px;">
-                                         There are so many #distractions in this world which attracts #people's minds. But one should be firm n #discipline in his decision n #sadhana to pay #attention only to the One who attracts everyone #heart that #Giridhariji . Because being #attracted to him means the end of circle of birth and death n the attainment of the #Supreme #bliss n eternally be with him that what real #freedom means #free from the trap of the #mind
+                                         Visiting Gloria may #Giridhari hold her n carry her 2his eternal abode where she may #eternally #serve him
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-bottom: 10px;">
+                                          <a href="https://twitter.com/vishwananda/status/751112378146820096" target="_blank">
+                                            <img class="twitter-img" src="https://pbs.twimg.com/media/Cmx8IuJWYAEgx-K.jpg" alt="Embedded image permalink" height="480">
+                                          </a>
                                         </td>
                                       </tr>
                                     </table>
@@ -870,16 +1032,16 @@
 
                     <tr>
                       <td>
-                        <table width="700" align="center" border="0" cellpadding="0" cellspacing="0" class="flexible-container" style="background-color:#ffffff; margin:0 auto;">
+                        <table width="700" border="0" cellpadding="0" cellspacing="0" class="flexible-container" style="background-color:#ffffff; margin:0 auto;">
                           <tr>
-                            <td class="text" style="border-top: 1px solid #dddddd; color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:12px; line-height:1.5; text-align:center; padding: 15px 40px 0 40px;">
-                                <a href="http://www.bhaktimarga.org" target="_blank" style="color:#888888;"> www.<span style="font-weight:bold;">bhaktimarga</span>.org</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                            <td class="text footer" style="border-top: 1px solid #dddddd; color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:12px; line-height:1.5; padding: 15px 40px 0 40px;">
+                                <a href="http://www.bhaktimarga.org" target="_blank" style="color:#888888;"> <span style="font-weight:bold;">bhaktimarga</span>.org</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                 <a href="http://www.bhaktimarga.org/contact" style="color:#888888;" target="_blank">Contact</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                                 <a href="http://www.bhaktimarga.org/content/unsubscribe-bhakti-marga-newsletter" target="_blank" style="color:#888888;">Unsubscribe</a>
                             </td>
                           </tr>
                           <tr>
-                            <td class="text" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:12px; line-height:1.5; text-align:center; padding: 6px 40px 20px 40px;">
+                            <td class="text footer" style="color:#888888; font-family:Avenir Next,Avenir,sans-serif; font-size:12px; line-height:1.5; padding: 6px 40px 20px 40px;">
                               Bhakti Marga · Am Geisberg 1-8 · Heidenrod-Springen, 65321· Germany
                             </td>
                           </tr>
