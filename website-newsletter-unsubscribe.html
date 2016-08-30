@@ -1,0 +1,68 @@
+<script>
+var subscriberlists=["optout_list_1","optout_list_2","optout_list_151"];
+function checkOptoutForm()
+{
+  var msg = {
+    "error_list":"Please select at least one newsletter to unsubscribe to."
+  };
+
+  try
+  {
+    var temp = false;
+    for(var i=0;i<subscriberlists.length;i++){
+      if(document.getElementById(subscriberlists[i]).checked==true){
+        temp = true;
+        break;
+      }
+    }
+    if(!temp) throw msg.error_list;
+
+    document.getElementById("unsubscribe").submit();
+  }
+  catch(e)
+  {
+    window.alert(e);
+    return false;
+  }
+}
+</script>
+<form id="unsubscribe" action="https://login.mailingwork.de/optout/optout/execute" method="post" accept-charset="utf-8" class="form-horizontal">
+  <input type="hidden" name="account_id" value="7826" />
+  <input type="hidden" name="account_code" value="MMrHP" />
+  <input type="hidden" name="optoutsetup_id" value="5" />
+  <input type="hidden" name="optoutsetup_code" value="Y7W21" />
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Unsubscribe to</label>
+    <div class="col-sm-7">
+      <div class="checkbox">
+        <label>
+          <input id="optout_list_1" type="checkbox" name="lists[1]" value="1" />
+          Bhakti Marga Newsletter
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input id="optout_list_2" type="checkbox" name="lists[2]" value="1" />
+          OM Chanting Newsletter
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input id="optout_list_151" type="checkbox" name="lists[151]" value="1" />
+          Fundraising Newsletter
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="optout_field_1" class="col-sm-3 control-label">Email</label>
+    <div class="col-sm-7">
+      <input id="optout_field_1" type="text" name="fields[1]" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-7">
+      <input type="button" name="btn_submit" value="Unsubscribe" onClick="return checkOptoutForm();" class="btn btn-primary" />
+    </div>
+  </div>
+</form>
